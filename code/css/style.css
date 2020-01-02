@@ -1,0 +1,228 @@
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.main {
+  margin-bottom: 50px;
+}
+
+.tabcontent {
+  display: none;
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Navigation */
+#navbar {
+  padding-top: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+#navbar .grandient-text {
+  background: linear-gradient(to right, #f81e79 20%, #f4130d 50%, #f4de12 90%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: "Caveat", cursive;
+  float: left;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 80%;
+  background-color: white;
+}
+
+/* Home */
+.card {
+  margin: 20px auto;
+  width: 80%;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+}
+.card-header {
+  background: linear-gradient(#00b4db, #0083b0);
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+.card-header-text {
+  padding: 20px 0;
+}
+.card-header .subtitle {
+  font-size: 20px;
+}
+.card-header .contact-links {
+  margin: 20px auto;
+}
+.card-header .contact-links i {
+  font-size: 30px;
+  color: white;
+}
+.card-photo {
+  margin: 0 auto;
+}
+.card-photo-img {
+  width: 300px;
+}
+.card-body ul {
+  list-style: none;
+}
+.card-body ul span.title {
+  display: inline-block;
+  min-width: 120px;
+}
+.card-body ul span.value {
+  color: #9e9e9e;
+}
+
+/* Resume */
+#resume .container {
+  width: 80%;
+  padding: 0 0 10px 0;
+  margin: 20px auto;
+  background-color: white;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+}
+#resume .container .timeline {
+  position: relative;
+  margin: 0 auto;
+  background: linear-gradient(#00b4db, #0083b0);
+  padding: 20px;
+}
+#resume .container .timeline::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: #e0e0e0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+#resume .container .timeline .left {
+  left: 0;
+}
+#resume .container .timeline .left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: -9px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+#resume .container .timeline .right {
+  left: 50%;
+}
+#resume .container .timeline .right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: -9px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+#resume .container .timeline-item {
+  position: relative;
+  padding: 15px 20px 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0);
+  max-width: 45%;
+}
+#resume .container .coding-skill {
+  margin: 10px;
+}
+#resume .container .coding-skill .item {
+  margin: 5px 0;
+}
+
+/*project*/
+#project {
+  margin: 20px auto;
+  width: 80%;
+}
+#project h4 {
+  padding: 20px 10px 0;
+  background: linear-gradient(to right, #c94b4b 6%, #4b134f);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+#project .item {
+  margin: 0 auto;
+  background-color: white;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+}
+#project .item img {
+  margin-top: 5px;
+  max-width: 100%;
+  opacity: 0.8;
+  transition: 0.5s ease-in-out;
+}
+#project .item img:hover {
+  opacity: 1;
+}
+#project .item .button {
+  background-color: #3c528b;
+  width: 150px;
+  line-height: 25px;
+  display: inline-block;
+  border-radius: 2px;
+  padding: 0.25em 0.1em;
+  text-decoration: none;
+  text-align: center;
+}
+#project .item .button a {
+  color: white;
+}
+#project .item .text {
+  padding-left: 10px;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  border-left: 5px solid #00b4db;
+}
+
+footer {
+  color: grey;
+  font-size: 13px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -100;
+}
+footer .content {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

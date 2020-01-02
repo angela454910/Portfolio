@@ -1,0 +1,235 @@
+$background: linear-gradient(#00b4db, #0083b0);
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+.main {
+  margin-bottom: 50px;
+}
+@mixin grandient-text {
+  background: linear-gradient(to right, #f81e79 20%, #f4130d 50%, #f4de12 90%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+@mixin box-shaow {
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+}
+@mixin button {
+  background-color: rgb(60, 82, 139);
+  width: 150px;
+  line-height: 25px;
+  display: inline-block;
+  border-radius: 2px;
+  padding: 0.25em 0.1em;
+  text-decoration: none;
+  text-align: center;
+  a {
+    color: white;
+  }
+}
+
+.tabcontent {
+  display: none;
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Navigation */
+#navbar {
+  padding-top: 20px;
+  width: 80%;
+  margin: 0 auto;
+
+  .grandient-text {
+    @include grandient-text();
+    font-size: 40px;
+    font-weight: 800;
+    font-family: "Caveat", cursive;
+    float: left;
+  }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 80%;
+  background-color: white;
+}
+/* Home */
+.card {
+  margin: 20px auto;
+  width: 80%;
+  border: none;
+  border-radius: 20px;
+  @include box-shaow();
+  &-header {
+    background: $background;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    &-text {
+      padding: 20px 0;
+    }
+    .subtitle {
+      font-size: 20px;
+    }
+    .contact-links {
+      margin: 20px auto;
+      i {
+        font-size: 30px;
+        color: white;
+      }
+    }
+  }
+  &-photo {
+    margin: 0 auto;
+    &-img {
+      width: 300px;
+    }
+  }
+  &-body {
+    ul {
+      list-style: none;
+      span.title {
+        display: inline-block;
+        min-width: 120px;
+      }
+      span.value {
+        color: #9e9e9e;
+      }
+    }
+  }
+}
+/* Resume */
+#resume .container {
+  width: 80%;
+  padding: 0 0 10px 0;
+  margin: 20px auto;
+  background-color: white;
+  @include box-shaow();
+  .timeline {
+    position: relative;
+    margin: 0 auto;
+    background: $background;
+    padding: 20px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 4px;
+      background-color: #e0e0e0;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+    .left {
+      left: 0;
+      &::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: -9px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent white;
+      }
+    }
+    .right {
+      left: 50%;
+      &::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: -9px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+    }
+    &-item {
+      position: relative;
+      padding: 15px 20px 10px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+      background-color: white;
+      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0);
+      max-width: 45%;
+    }
+  }
+  .coding-skill {
+    margin: 10px;
+    .item {
+      margin: 5px 0;
+    }
+  }
+}
+/*project*/
+#project {
+  margin: 20px auto;
+  width: 80%;
+  h4 {
+    padding: 20px 10px 0;
+    background: linear-gradient(to right, #c94b4b 6%, #4b134f);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+  }
+  .item {
+    margin: 0 auto;
+    background-color: white;
+    position: relative;
+    border-radius: 20px;
+    @include box-shaow();
+    img {
+      margin-top: 5px;
+      max-width: 100%;
+      opacity: 0.8;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .button {
+      @include button();
+    }
+    .text {
+      padding-left: 10px;
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: #f1f1f1;
+      width: 100%;
+      padding: 20px;
+      border-left: 5px solid #00b4db;
+    }
+  }
+}
+footer {
+  color: grey;
+  font-size: 13px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -100;
+  .content {
+    text-align: center;
+  }
+}
